@@ -15,7 +15,19 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
 
-    $string = 'HelloWorld';
+    return view('home');
+})->name('home');
 
-    return view('home', compact('string'));
-});
+Route::get('/contacts', function () {
+    return view('contacts');
+})->name('contacts');
+
+Route::get('/careers', function () {
+
+    return view('careers');
+})->name('careers');
+
+Route::get('/aboutus', function () {
+
+    return view('about-us');
+})->name('about-us');
